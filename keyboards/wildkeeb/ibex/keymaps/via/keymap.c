@@ -80,15 +80,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_NO,   KC_NO,            KC_DOT,  KC_1,    KC_2,    KC_3,    KP_ENT,  KC_MNXT, KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_TRNS, KC_VOLU,  KC_NO,    
 //    F4       ctrl     win      alt                                 space                      alt      fn       ctrl      left     down     right*/
       KC_NO,   KC_LCTL, KC_LGUI, KC_0,                               KC_MPLY,                   KC_RALT, KC_TRNS, KC_RCTL,  KC_TRNS, KC_VOLD, KC_TRNS)
-//  [1] = LAYOUT_65_ansi(
-//     /* esc      1        2        3        4       5       6       7       8       9         0        -         =     bkspc       `~  */
-//      KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,  KC_F5,  KC_F6,  KC_F7,  KC_F8,  KC_F9,   KC_F10,  KC_F11,   KC_F12,  KC_DEL,   KC_PSCR,
-//     /*  tab      Q       W        E        R        T      Y        U      I        O        P        [         ]        \      delete*/ 
-//      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RESET,  KC_TRNS,KC_TRNS,KC_TRNS,KC_INS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_PAUS, KC_TRNS,  KC_TRNS,
-//     /*  caps     A       S        D        F        G      H        J      K        L        ;        '        enter             pg up*/
-//      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS, KC_TRNS, KC_TRNS,  KC_INS,            KC_HOME,
-//     /* shift             Z         X        C       V       B       N      M        ,        .        /        shift     up      pg dn*/
-//      KC_LSFT,          KC_TRNS, KC_TRNS, KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_MUTE, KC_TRNS, KC_TRNS, KC_TRNS,  KC_RSFT, KC_VOLU,  KC_END,
-//     /* ctrl     win      alt                              space                    alt      fn       ctrl      left     down     right*/
-//      KC_LCTL, KC_LGUI, KC_LALT,                          KC_TRNS,                KC_RALT, KC_TRNS, KC_RCTL,  KC_TRNS, KC_VOLD,  KC_TRNS)
 };
+
+void encoder_update_user(uint8_t index, bool clockwise) {
+    if (index == 0) { /* First encoder */
+        if (clockwise) {
+            tap_code(KC_VOLU);
+        } else {
+            tap_code(KC_VOLD);
+        }
+    }
+}
