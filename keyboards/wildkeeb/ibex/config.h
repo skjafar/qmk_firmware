@@ -23,7 +23,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    WildKeeb
 #define PRODUCT         Ibex
-#define DESCRIPTION     65% + macros + encoder keyboard that can be assembled with only through hole components 
 
 /* key matrix size */
 #define MATRIX_ROWS 6
@@ -55,7 +54,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ENCODERS_PAD_A { C5 }
 #define ENCODERS_PAD_B { C6 }
 //#define ENCODER_DIRECTION_FLIP
-#define ENCODER_RESOLUTION 1
+#define ENCODER_RESOLUTION 4
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
@@ -66,7 +65,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LOCKING_RESYNC_ENABLE
 
 // add delay on tap_code
-#define TAP_CODE_DEALY 30
+// #define TAP_CODE_DEALY 30
 
 /*
  * Force NKRO

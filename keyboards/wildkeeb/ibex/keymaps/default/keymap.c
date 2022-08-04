@@ -25,7 +25,7 @@ Y or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #define KP_DOT      KC_KP_DOT
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT_65_ansi(
+  [0] = LAYOUT_74_ansi(
 //             ESC
                KC_GESC,
 //    knob     ~        1        2        3        4        5        6        7        8        9        0        -         =        bkspc     HOME
@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //    F4       ctrl     win      alt                                 space                      alt      fn       ctrl      left     down     right*/
       KC_F4,   KC_LCTL, KC_LGUI, KC_LALT,                            KC_SPC,                    KC_RALT, MO(1),   KC_RCTL,  KC_LEFT, KC_DOWN, KC_RIGHT),
 
-  [1] = LAYOUT_65_ansi(
+  [1] = LAYOUT_74_ansi(
 //             ESC
                KC_TRNS,
 //    knob     ~        1        2        3        4        5        6        7        8        9        0        -         =        bkspc     HOME
@@ -53,41 +53,43 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //    F4       ctrl     win      alt                                 space                      alt      fn       ctrl      left     down     right*/
       KC_TRNS, KC_LCTL, KC_LGUI, KC_LALT,                            KC_SPC,                    KC_RALT, KC_TRNS, KC_RCTL,  KC_TRNS, KC_VOLD, KC_TRNS),
 
-  [2] = LAYOUT_65_ansi(
+  [2] = LAYOUT_74_ansi(
 //             ESC
                KC_GESC,
 //    knob     ~        1        2        3        4        5        6        7        8        9        0        -         =        bkspc     HOME
-      KC_TRNS, KC_NO,   KC_NO,   KC_NO,   KP_SLASH,KP_MULT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS,
+      KC_TRNS, KC_NO,   KC_NO,   KC_SLASH,KP_MULT, KP_MINUS,KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS,
 //    F1       tab      Q        W        E        R        T        Y        U        I        O        P        [         ]        \         END 
-      KC_TRNS, KC_TRNS, KC_NO,   KC_7,    KC_8,    KC_9,    KP_MINUS,KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,    KC_TRNS,  
+      KC_TRNS, KC_TRNS, KC_7,    KC_8,    KC_9,    KC_PLUS, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,    KC_TRNS,  
 //    F2       caps     A        S        D        F        G        H        J        K        L        ;        '         enter              SUPER
-      KC_TRNS, KC_TRNS, KC_NO,   KC_4,    KC_5,    KC_6,    KP_PLUS, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_ENT,            KC_TRNS,  
+      KC_TRNS, KC_TRNS, KC_4,    KC_5,    KC_6,    KC_PLUS, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_ENT,            KC_TRNS,  
 //    F3       shift             Z        X        C        V        B        N        M        ,        .        /         shift    up        DEL
-      KC_TRNS, KC_TRNS,          KC_DOT,  KC_1,    KC_2,    KC_3,    KP_ENT,  TG(2),   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_TRNS, KC_TRNS,  KC_TRNS,  
-//    F4       ctrl     win      alt                                 space                      alt      fn       ctrl      left     down     right*/
-      KC_TRNS, KC_LCTL, KC_LGUI, KC_0,                               KC_SPC,                    KC_RALT, KC_TRNS, KC_RCTL,  KC_TRNS, KC_TRNS, KC_TRNS),
+      KC_TRNS, KC_TRNS,          KC_1,    KC_2,    KC_3,    KC_ENT,  KC_NO,   TG(2),   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_TRNS, KC_TRNS,  KC_TRNS,  
+//    F4       ctrl     win      alt                                 space                      alt      fn       ctrl      left     down      right*/
+      KC_TRNS, KC_LCTL, KC_0,    KC_DOT,                             KC_SPC,                    KC_RALT, KC_TRNS, KC_RCTL,  KC_TRNS, KC_TRNS,  KC_TRNS),
 
-  [3] = LAYOUT_65_ansi(
+  [3] = LAYOUT_74_ansi(
 //             ESC
                KC_GESC,
 //    knob     ~        1        2        3        4        5        6        7        8        9        0        -         =        bkspc     HOME
-      KC_NO,   KC_NO,   KC_NO,   KC_NO,   KP_SLASH,KP_MULT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,    KC_NO,  
+      KC_NO,   KC_NO,   KC_NO,   KC_SLASH,KP_MULT, KP_MINUS,KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,    KC_NO,  
 //    F1       tab      Q        W        E        R        T        Y        U        I        O        P        [         ]        \         END 
-      KC_NO,   KC_NO,   KC_NO,   KC_7,    KC_8,    KC_9,    KP_MINUS,KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_MPRV, KC_NO,    KC_NO,   KC_NO,    KC_NO,    
+      KC_NO,   KC_TRNS, KC_7,    KC_8,    KC_9,    KC_PLUS, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,    KC_NO,    
 //    F2       caps     A        S        D        F        G        H        J        K        L        ;        '         enter              SUPER
-      KC_NO,   KC_NO,   KC_NO,   KC_4,    KC_5,    KC_6,    KP_PLUS, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_ENT,            KC_TRNS,  
+      KC_NO,   KC_NO,   KC_4,    KC_5,    KC_6,    KC_PLUS, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_MPLY,           KC_TRNS,  
 //    F3       shift             Z        X        C        V        B        N        M        ,        .        /         shift    up        DEL
-      KC_NO,   KC_NO,            KC_DOT,  KC_1,    KC_2,    KC_3,    KP_ENT,  KC_MNXT, KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_TRNS, KC_VOLU,  KC_NO,    
-//    F4       ctrl     win      alt                                 space                      alt      fn       ctrl      left     down     right*/
-      KC_NO,   KC_LCTL, KC_LGUI, KC_0,                               KC_MPLY,                   KC_RALT, KC_TRNS, KC_RCTL,  KC_TRNS, KC_VOLD, KC_TRNS)
+      KC_NO,   KC_TRNS,          KC_1,    KC_2,    KC_3,    KC_ENT,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_TRNS, KC_VOLU,  KC_NO,    
+//    F4       ctrl     win      alt                                 space                      alt      fn       ctrl      left     down      right*/
+      KC_NO,   KC_LCTL, KC_0,    KC_DOT,                             KC_SPC,                    KC_RALT, KC_TRNS, KC_RCTL,  KC_MPRV, KC_VOLD,  KC_MNXT)
 };
 
-void encoder_update_kb(uint8_t index, bool clockwise) {
+bool encoder_update_kb(uint8_t index, bool clockwise) {
     if (index == 0) { /* First encoder */
         if (clockwise) {
             tap_code(KC_VOLU);
         } else {
             tap_code(KC_VOLD);
         }
+        return true;
     }
+    return false;
 }

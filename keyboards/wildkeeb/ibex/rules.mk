@@ -18,7 +18,7 @@ BOOTLOADER = USBasp
 #   change yes to no to disable
 #
 ENCODER_ENABLE = yes		# Enable qmk encoder code
-BOOTMAGIC_ENABLE = no		# Virtual DIP switch configuration
+BOOTMAGIC_ENABLE = lite		# Virtual DIP switch configuration
 MOUSEKEY_ENABLE = yes       # Mouse keys
 EXTRAKEY_ENABLE = yes       # Audio control and System control
 CONSOLE_ENABLE = no    		# Console for debug
@@ -35,4 +35,4 @@ BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 AUDIO_ENABLE = no           # Audio output on port C6
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 DYNAMIC_MACRO_ENABLE = yes	# Enable macros to be recorded on the fly
-LAYOUTS = 65_ansi 
+#LAYOUTS = 74_ansi 
